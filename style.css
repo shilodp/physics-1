@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+#road {
+    position: relative;
+    height: 150px;
+}
+
+#message {
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+    height: 100px;
+}
+
+#message h1 {
+    margin: 0;
+}
+
+#line {
+    position: absolute;
+    bottom: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    left: 50px;
+    right: 50px;
+    border-radius: 10px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 15px);
+    right: 0;
+    transform: translateX(50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(13px, -50%);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    z-index: 30;
+    background-color: green;
+}
+
+#home {
+    left: 0;
+}
+
+#home::before {
+    background-image: url("home.ico");
+}
+
+#school {
+    right: 0;
+}
+
+#school::before {
+    background-image: url("school.png");
+}
+
+#shop::before {
+    background-image: url("shop.ico");
+}
+
+#filler {
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+    transition: width 3s ease-in-out;
+
+    &::before {
+        background-image: url("girl.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 75px;
+        height: 75px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(13px, -5px);
+        background-color: blue;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        z-index: 40;
+    }
+}
+
+#buttons {
+    padding: 30px;
+}
+
+#task {
+    color: rgb(90, 88, 88);
+}
+
+#task .value {
+    color: black;
+}
+
+#options label {
+    display: block;
+    font-size: 18px;
+}
+
+#actions {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+#actions button {
+    cursor: pointer;
+    height: 50px;
+    border-radius: 15px;
+    border-width: 1px;
+    min-width: 150px;
+    font-size: 20px;
+}
+
+@media (prefers-dark-interface) {
+    body {
+        color: white;
+        background: #242222;
+    }
+    #filler {
+        background: dodgerblue;
+    }
+    #task .value {
+        color: white;
+    }
+}
