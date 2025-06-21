@@ -85,27 +85,18 @@
     background-color: black;
     border-radius: 10px;
     transition: width 3s ease-in-out;
+}
 
-    &::before {
-        background-image: url("girl.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 75px;
-        height: 75px;
-    }
+#filler::before {
+    background-image: url("girl.webp");
+}
 
-    &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translate(13px, -5px);
-        background-color: blue;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        z-index: 40;
-    }
+#filler::after {
+    transform: translate(10px, -2.5px);
+    background-color: blue;
+    height: 20px;
+    width: 20px;
+    z-index: 40;
 }
 
 #buttons {
